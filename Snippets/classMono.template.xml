@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>RFL-C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>classMono</Shortcut>
+      <_Description>MonoBehavior class base</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="name" isIdentifier="true">
+        <Default>ClassName</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[public class $name$: MonoBehaviour {
+
+	void Start()
+	{
+		$selected$$end$
+	}
+	
+	void Update()
+	{
+	
+	}
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>RFL-C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>Debugvar</Shortcut>
+      <_Description>Debug Variable</_Description>
+      <TemplateType>Unknown</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="var" isIdentifier="true">
+        <Default>var</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[Debug.Log("$var$: ",  $var$.ToString());$end$]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

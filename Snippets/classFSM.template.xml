@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>RFL-C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>classFSM</Shortcut>
+      <_Description>Extends MonoBehavior with FSM</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="className" isIdentifier="true">
+        <Default>NameController</Default>
+      </Variable>
+      <Variable name="selectec">
+        <Default>notset</Default>
+      </Variable>
+      <Variable name="ST_A" isIdentifier="true">
+        <Default>StateA</Default>
+      </Variable>
+      <Variable name="ST_B" isIdentifier="true">
+        <Default>StateB</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[public class $className$:MonoBehaviour {
+	enum State {
+		$ST_A$,
+		$ST_B$,
+		$selected$$end$
+	}
+ 	
+	State _curState;
+	
+	void Awake()
+ 	{
+ 	
+ 	}
+ 	
+ 	void Update()
+ 	{
+ 		ExecuteState(_curState);
+ 	}
+ 
+	void ChangeState(State newState)
+	{
+		ExitState(_curState);
+		_curState=newState;
+		EnterState(newState);
+	}
+	
+	void EnterState(State state)
+	{
+		Debug.Log ("EnterState: "+state.ToString());
+		switch (state) {
+			case State.$ST_A$:
+ 
+				break;
+			case State.$ST_B$:
+ 
+				break;
+		}
+	}
+	
+	void ExecuteState(State state)
+	{
+		switch (state) {
+			case State.$ST_A$:
+ 
+				break;
+			case State.$ST_B$:
+ 
+				break;
+		}
+	}
+	
+	void ExitState(State state)
+	{
+		switch (state) {
+			case State.$ST_A$:
+			
+				break;
+			case State.$ST_B$:
+			
+				break;
+		}
+	}
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>
